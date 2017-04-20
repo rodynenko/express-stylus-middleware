@@ -1,0 +1,19 @@
+{
+  "name": "express-stylus-middleware",
+  "version": "0.1.0",
+  "description": "Stylus-to-CSS conversion middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Stylus",
+    "Express",
+    "middleware"
+  ],
+  "author": "Taras Rodynenko",
+  "license": "MIT",
+  "dependencies": {
+    "stylus": "^0.54.5"
+  }
+}
