@@ -4,7 +4,7 @@
   "description": "Stylus-to-CSS conversion middleware",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine"
   },
   "keywords": [
     "Stylus",
@@ -15,5 +15,10 @@
   "license": "MIT",
   "dependencies": {
     "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "express": "^4.15.2",
+    "jasmine": "^2.5.3",
+    "supertest": "^3.0.0"
   }
 }
