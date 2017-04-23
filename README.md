@@ -31,3 +31,10 @@ Additionally, you can use some Stylus's in-build options (in theory, not tested)
 `linenos`   Emits comments in the generated css indicating 
               the corresponding stylus line
 `sourcemap` Generates a sourcemap in sourcemaps v3 format
+```
+
+## Testing
+    npm test
+    
+## Licence
+MIT
