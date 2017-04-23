@@ -7,7 +7,7 @@ It's a Stylus-version of [Express-less](https://github.com/toogle/express-less) 
 
 ## Usage
 ```js
-var express = require("require"), expressStylus = require("require");  
+var express = require("express"), expressStylus = require("express-stylus-middleware");  
 var app = express();  
 app.use("/css", expressStylus(__dirname + "/stylus-css"));  
 ```
