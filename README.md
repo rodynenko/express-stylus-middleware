@@ -7,7 +7,7 @@ It's a Stylus-version of [Express-less](https://github.com/toogle/express-less) 
 
 ## Usage
 ```js
-var express = require("require"), expressStylus = require("require");  
+var express = require("express"), expressStylus = require("express-stylus-middleware");  
 var app = express();  
 app.use("/css", expressStylus(__dirname + "/stylus-css"));  
 ```
@@ -31,3 +31,17 @@ Additionally, you can use some Stylus's in-build options (in theory, not tested)
 `linenos`   Emits comments in the generated css indicating 
               the corresponding stylus line
 `sourcemap` Generates a sourcemap in sourcemaps v3 format
+```
+
+### Usage with express.static
+You have to use express-stylus-middleware before express.static
+```
+app.use('/css', expressStylus(__dirname + '/stylus-css'));
+app.use(express.static('public'));
+```
+
+## Testing
+    npm test
+    
+## Licence
+MIT
