@@ -1,6 +1,6 @@
 {
   "name": "express-stylus-middleware",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Stylus-to-CSS conversion middleware",
   "main": "index.js",
   "scripts": {
