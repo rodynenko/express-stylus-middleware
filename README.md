@@ -33,6 +33,13 @@ Additionally, you can use some Stylus's in-build options (in theory, not tested)
 `sourcemap` Generates a sourcemap in sourcemaps v3 format
 ```
 
+### Usage with express.static
+You have to use express-stylus-middleware before express.static
+```
+app.use('/css', expressStylus(__dirname + '/stylus-css'));
+app.use(express.static('public'));
+```
+
 ## Testing
     npm test
     
