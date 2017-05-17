@@ -14,6 +14,7 @@
   "author": "Taras Rodynenko",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer-stylus": "^0.14.0",
     "stylus": "^0.54.5"
   },
   "devDependencies": {
