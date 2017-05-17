@@ -29,6 +29,18 @@ describe('Express-stylus middleware', function() {
 			.end(finishSpec(done));
 	});
 
+	it('should return valid CSS with autoprefix', function(done) {
+		this.app = express();
+		this.app.use(stylus(__dirname + '/fixtures', { autoprefixer: true }));
+
+		request(this.app)
+			.get('/valid.css')
+			.expect(200)
+			.expect('Content-Type', /css/)
+			.expect(/display: -ms-flexbox/)
+			.end(finishSpec(done));
+	});
+
 	it('should respond with 404 if file not found', function(done) {
 		request(this.app)
 			.get('/another.css')
