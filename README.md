@@ -13,13 +13,13 @@ app.use("/css", expressStylus(__dirname + "/stylus-css"));
 ```
 
 Also you can use cache:
-
-    app.use("/css", expressStylus(__dirname + "/stylus-css"), { cache: true });
-
+```
+app.use("/css", expressStylus(__dirname + "/stylus-css"), { cache: true });
+```
 And make compressed css:
-
-    app.use("/css", expressStylus(__dirname + "/stylus-css", { compress: true }));
-
+```
+app.use("/css", expressStylus(__dirname + "/stylus-css", { compress: true }));
+```
 Additionally, you can use some Stylus's in-build options (in theory, not tested):
 
 ```
@@ -32,6 +32,17 @@ Additionally, you can use some Stylus's in-build options (in theory, not tested)
               the corresponding stylus line
 `sourcemap` Generates a sourcemap in sourcemaps v3 format
 ```
+
+### Autoprefixer
+Even if you don't use task runners or bundlers, you can turn on [PostCSS/Autoprefixer](https://github.com/postcss/autoprefixer):
+```
+app.use("/css", expressStylus(__dirname + "/stylus-css", { autoprefixer: true }));
+```
+By default browsers option is set to 'last 2 versions'. You can modify it:
+```
+app.use("/css", expressStylus(__dirname + "/stylus-css", { autoprefixer: { browsers: ['Firefox > 20']} }));
+```
+You can set all [Autoprefixer options](https://github.com/postcss/autoprefixer#options) in the same way.
 
 ### Usage with express.static
 You have to use express-stylus-middleware before express.static
