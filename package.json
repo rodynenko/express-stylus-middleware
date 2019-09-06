@@ -1,6 +1,6 @@
 {
   "name": "express-stylus-middleware",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Stylus-to-CSS conversion middleware",
   "main": "index.js",
   "scripts": {
@@ -15,12 +15,12 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer-stylus": "^0.14.0",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.7"
   },
   "devDependencies": {
-    "express": "^4.15.2",
-    "jasmine": "^2.5.3",
-    "supertest": "^3.0.0"
+    "express": "^4.17.1",
+    "jasmine": "^3.4.0",
+    "supertest": "^4.0.2"
   },
   "repository": {
     "type": "git",
