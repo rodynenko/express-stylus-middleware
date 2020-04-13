@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "express": "^4.17.1",
-    "jasmine": "^3.4.0",
+    "jasmine": "^3.5.0",
     "supertest": "^4.0.2"
   },
   "repository": {
