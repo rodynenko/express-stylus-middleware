@@ -15,11 +15,11 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer-stylus": "^0.14.0",
-    "stylus": "^0.54.7"
+    "stylus": "^0.54.8"
   },
   "devDependencies": {
     "express": "^4.17.1",
-    "jasmine": "^3.5.0",
+    "jasmine": "^3.6.1",
     "supertest": "^4.0.2"
   },
   "repository": {
