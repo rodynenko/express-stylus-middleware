@@ -61,4 +61,15 @@ describe('Express-stylus middleware', function() {
 			.expect(404)
 			.end(finishSpec(done));
 	})
+
+	it('should work with cache', function (done) {
+		this.app = express();
+		this.app.use(stylus(__dirname + '/fixtures', { cache: true }));
+
+		request(this.app)
+			.get('/valid.css')
+			.expect(200)
+			.expect('Content-Type', /css/)
+			.end(finishSpec(done));
+	})
 });
