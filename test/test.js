@@ -30,10 +30,10 @@ describe('Express-stylus middleware', function() {
 	});
 
 	it('should return valid CSS with autoprefix', function(done) {
-		this.app = express();
-		this.app.use(stylus(__dirname + '/fixtures', { autoprefixer: true }));
+		const app = express();
+		app.use(stylus(__dirname + '/fixtures', { autoprefixer: true }));
 
-		request(this.app)
+		request(app)
 			.get('/valid.css')
 			.expect(200)
 			.expect('Content-Type', /css/)
@@ -62,11 +62,24 @@ describe('Express-stylus middleware', function() {
 			.end(finishSpec(done));
 	})
 
-	it('should work with cache', function (done) {
-		this.app = express();
-		this.app.use(stylus(__dirname + '/fixtures', { cache: true }));
+	it('should include sourcemap', function (done) {
+		const app = express();
+		app.use(stylus(__dirname + '/fixtures', { autoprefixer: true, sourcemap: true }));
 
-		request(this.app)
+		request(app)
+			.get('/valid.css')
+			.expect(200)
+			.expect('Content-Type', /css/)
+			.expect(/display: -ms-flexbox/)
+			.expect(/# sourceMappingURL=valid\.css\.map/)
+			.end(finishSpec(done));
+	})
+
+	it('should work with cache', function (done) {
+		const app = express();
+		app.use(stylus(__dirname + '/fixtures', { cache: true }));
+
+		request(app)
 			.get('/valid.css')
 			.expect(200)
 			.expect('Content-Type', /css/)

@@ -14,13 +14,15 @@
   "author": "Taras Rodynenko",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer-stylus": "^0.14.0",
-    "stylus": "^0.54.8"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.40",
+    "multi-stage-sourcemap": "0.3.1",
+    "stylus": "^0.63.0"
   },
   "devDependencies": {
-    "express": "^4.17.1",
-    "jasmine": "^3.6.1",
-    "supertest": "^4.0.2"
+    "express": "^4.19.2",
+    "jasmine": "^5.2.0",
+    "supertest": "^7.0.0"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,8 @@
   },
   "bugs": {
     "url": "https://github.com/rodynenko/express-stylus-middleware/issues"
+  },
+  "engines": {
+    "node": "^20.9.0"
   }
 }
