@@ -32,6 +32,6 @@
     "url": "https://github.com/rodynenko/express-stylus-middleware/issues"
   },
   "engines": {
-    "node": "^20.9.0"
+    "node": ">=14"
   }
 }
